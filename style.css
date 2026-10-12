@@ -4,19 +4,19 @@
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --sage:        #5a7a3a;
-  --sage-light:  #7da050;
-  --sage-dark:   #3b5526;
-  --beige:       #f2c97a;
-  --beige-light: #fdf4e3;
-  --caramel:     #c9721f;
-  --caramel-deep:#a0520e;
-  --ocre:        #e8900a;
-  --cream:       #f4f7f0;
+  --sage:        #4e8c2f;
+  --sage-light:  #6cb840;
+  --sage-dark:   #2e5a1a;
+  --beige:       #ff8c42;
+  --beige-light: #fff5ee;
+  --caramel:     #e05f00;
+  --caramel-deep:#b84a00;
+  --ocre:        #ff6b1a;
+  --cream:       #f2f8ee;
   --white:       #ffffff;
-  --ink:         #18190f;
-  --ink-soft:    #363628;
-  --ink-faint:   #74746a;
+  --ink:         #131a08;
+  --ink-soft:    #2e3820;
+  --ink-faint:   #6b7260;
 
   --font-serif:  'Playfair Display', Georgia, serif;
   --font-accent: 'Forum', serif;
@@ -100,7 +100,8 @@ input, textarea, select, button {
 body:has(a:hover) .cursor-follower,
 body:has(button:hover) .cursor-follower {
   width: 56px; height: 56px;
-  background: rgba(107,125,83,.12);
+  background: rgba(255,107,26,.15);
+  border-color: var(--ocre);
 }
 
 /* ── LOADER ── */
@@ -506,16 +507,16 @@ body:has(button:hover) .cursor-follower {
 }
 
 .btn--primary {
-  background: var(--sage);
+  background: linear-gradient(135deg, var(--sage), var(--sage-light));
   color: var(--white);
-  border: 2px solid var(--sage);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(78,140,47,.35);
 }
 
 .btn--primary:hover {
-  background: var(--sage-dark);
-  border-color: var(--sage-dark);
+  background: linear-gradient(135deg, var(--sage-light), var(--sage));
+  box-shadow: 0 8px 32px rgba(78,140,47,.5);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(107,125,83,.35);
 }
 
 .btn--ghost {
@@ -631,17 +632,20 @@ body:has(button:hover) .cursor-follower {
   position: absolute; inset: 0;
   background:
     linear-gradient(
-      160deg,
-      rgba(24,25,15,.65) 0%,
-      rgba(59,85,38,.45) 40%,
-      rgba(18,20,10,.8) 100%
+      155deg,
+      rgba(13,18,6,.82) 0%,
+      rgba(46,90,26,.5) 35%,
+      rgba(224,95,0,.12) 65%,
+      rgba(13,18,6,.9) 100%
     ),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80&auto=format') center/cover no-repeat;
+    url('https://puraexperience.fr/wp-content/uploads/2026/02/1-5-e1771928958850-768x513.png') center/cover no-repeat;
 }
 
 .hero__bg-overlay {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(90,122,58,.25) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse at 60% 40%, rgba(255,107,26,.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(78,140,47,.22) 0%, transparent 50%);
 }
 
 .hero__particles {
@@ -1867,4 +1871,5 @@ body:has(button:hover) .cursor-follower {
   .testimonials__grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
+
 
